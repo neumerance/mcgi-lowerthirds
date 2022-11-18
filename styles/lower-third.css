@@ -58,6 +58,7 @@ body {
 #lower-third__lower-bar {
   width: 100%;
   height: 60px;
+  margin-bottom: -60px;
   display: flex;
   justify-content: flex-end;
   width: 100vw;
@@ -101,6 +102,7 @@ body {
 }
 #lower-third__lower-bar #lower-third__lower-bar__not-intended {
   width: 550px;
+  margin-right: -551px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2eabb1+0,222b7d+61,222b7d+96,294081+100 */
   background: #2eabb1; /* Old browsers */
   background: -moz-linear-gradient(left,  #2eabb1 0%, #222b7d 61%, #222b7d 96%, #294081 100%); /* FF3.6-15 */
@@ -119,6 +121,7 @@ body {
 }
 #lower-third__lower-bar #lower-third__lower-bar__date {
   width: 300px;
+  margin-right: -321px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,7e3a10+64,7e3a10+64 */
   background: #a90329; /* Old browsers */
   background: -moz-linear-gradient(left,  #5F170B 0%, #7e3a10 64%, #7e3a10 64%); /* FF3.6-15 */

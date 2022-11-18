@@ -6,11 +6,11 @@ class ControlsAnimation {
     return this;
   }
 
-  toggleSlideUpDown(size, toggleStatus) {
-    if (toggleStatus === '0') {
-      this.slideUp(size)
-    } else {
+  toggleSlideUpDown(size, toggled) {
+    if (toggled) {
       this.slideDown(size)
+    } else {
+      this.slideUp(size)
     }
   }
 
@@ -25,6 +25,30 @@ class ControlsAnimation {
   slideDown(size) {
     this.elem.animate({
       marginBottom: "-="+size,
+      duration: 400,
+      easing: "easein"
+    });
+  }
+
+  toggleSlideLeftRight(size, toggled) {
+    if (toggled) {
+      this.slideLeft(size)
+    } else {
+      this.slideRight(size)
+    }
+  }
+
+  slideRight(size) {
+    this.elem.animate({
+      marginRight: "+="+size,
+      duration: 400,
+      easing: "easein"
+    });
+  }
+
+  slideLeft(size) {
+    this.elem.animate({
+      marginRight: "-="+size,
       duration: 400,
       easing: "easein"
     });

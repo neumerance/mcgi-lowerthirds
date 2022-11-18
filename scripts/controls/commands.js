@@ -50,8 +50,48 @@ class ControlsCommands {
       {
         target: target,
         value: value,
-        toggleStatus: elem.attr('data-toggle-status')
+        toggled: elem.attr('data-toggle-status') == '1'
       }
     )
+  }
+
+  onLowerThirdToggle(el) {
+    const self = this;
+    const elem = $(el);
+    const target = elem.attr('data-target');
+
+    if (!elem.length) { throw 'ControlsCommands: no element is found' }
+    if (!target.length) { throw 'ControlsCommands: no target is found' }
+
+    self.channel.broadcast(
+      'onToggleSlideUpDown',
+      {
+        target: target,
+        value: 60,
+        toggled: !elem.is(':checked')
+      }
+    )
+
+    setTimeout(() => {
+      self.channel.broadcast(
+        'onToggleSlideLeftRight',
+        {
+          target: `${target}__date`,
+          value: 321,
+          toggled: !elem.is(':checked')
+        }
+      )
+    }, 400);
+
+    setTimeout(() => {
+      self.channel.broadcast(
+        'onToggleSlideLeftRight',
+        {
+          target: `${target}__not-intended`,
+          value: 551,
+          toggled: !elem.is(':checked')
+        }
+      )
+    }, 500);
   }
 }

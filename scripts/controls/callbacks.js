@@ -6,6 +6,11 @@ class ControlsCallbacks {
 
   onToggleSlideUpDown(params) {
     const animator = new ControlsAnimation(params.target)
-    animator.toggleSlideUpDown(params.value, params.toggleStatus);
+    animator.toggleSlideUpDown(params.value, params.toggled);
+  }
+
+  onToggleSlideLeftRight(params) {
+    const animator = new ControlsAnimation(params.target);
+    animator.toggleSlideLeftRight(params.value, params.toggled);
   }
 }
