@@ -17,7 +17,6 @@ class ControlsChannel {
 
   listen() {
     const self = this;
-
     self.channel.onmessage = (event) => {
       this.callbacks[event.data.command](event.data.params);
     }

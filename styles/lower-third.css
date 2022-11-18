@@ -23,6 +23,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  margin-bottom: -68px;
 }
 #lower-third__upper-bar__title {
   width: 818px;

@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="styles/controls.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="scripts/animate.js"></script>
     <script src="scripts/controls/callbacks.js"></script>
     <script src="scripts/controls/channel.js"></script>
     <script src="scripts/controls/commands.js"></script>
+    <script src="scripts/controls/animate.js"></script>
 
     <script>
       var controlCallbacks = new ControlsCallbacks();
@@ -30,7 +30,17 @@
               onkeyup="window.controlCommand.onTextChange(this)"
               data-target="#lower-third__upper-bar__title-text"
             />
-            <button class="input-group-text btn btn-secondary btn-sm">OFF</button>
+            <button
+              class="input-group-text btn btn-secondary btn-sm"
+              data-value="68"
+              onclick="window.controlCommand.onToggleSlideUpDown(this); window.controlCommand.onToggle(this)"
+              data-toggle-on="ON"
+              data-toggle-off="OFF"
+              data-toggle-status="0"
+              data-target="#lower-third__upper-bar"
+            >
+              OFF
+            </button>
           </div>
         </div>
       </div>
