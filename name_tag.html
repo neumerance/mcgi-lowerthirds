@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/lower-third.css" />
+    <link rel="stylesheet" href="styles/name-tag.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="scripts/controls/callbacks.js"></script>
@@ -10,26 +10,19 @@
     <script src="scripts/controls/animate.js"></script>
   </head>
   <body>
-    <div id="lower-third__container">
-      <div>
-        <div id="lower-third__upper-bar">
-          <div id="lower-third__upper-bar__title">
-            <h1 id="lower-third__upper-bar__title-text">PRAYER MEETING</h1>
-          </div>
-        </div>
-        <div id="lower-third__lower-bar">
-          <div id="lower-third__lower-bar__not-intended" class="lower-third__lower-bar-slanted non-intended">
-            <h5>NOT INTENDED FOR BROADCAST</h5>
-          </div>
-          <div id="lower-third__lower-bar__date" class="lower-third__lower-bar-slanted">
-            <h5>NOVEMBER 19, 2022</h5>
+    <div id="name-tag__container">
+      <div id="name-tag__bars">
+        <div id="name-tag__upper-bar">
+          <div id="name-tag__upper-bar__title">
+            <h2 id="name-tag__upper-bar__title-text">BROTHER</h2>
+            <h1 id="name-tag__upper-bar__title-text">DANIEL RAZON</h1>
           </div>
         </div>
       </div>
     </div>
     <script>
       var controlCallbacks = new ControlsCallbacks();
-      var channel = new ControlsChannel('lowerThirdChannel', controlCallbacks)
+      var channel = new ControlsChannel('nameTagChannel', controlCallbacks)
 
       channel.listen();
     </script>

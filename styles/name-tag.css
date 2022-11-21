@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Organetto Bold';
+  src: url(organetto-bold.otf);
+}
+
+body {
+  background: none;
+  position: relative;
+  font-family: 'Organetto Bold';
+  overflow: hidden;
+  background: green;
+}
+#name-tag__container {
+  width: 1280px;
+  height: 720px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+#name-tag__bars {
+  margin-bottom: 140px;
+}
+
+#name-tag__upper-bar {
+  width: 100%;
+  position: relative;
+}
+#name-tag__upper-bar__title {
+  position: relative;
+  background: #FFFFFF;
+  padding: 10px 60px;
+  border-right: 1px solid #FFFFFF;
+  z-index: -1020;
+  border-bottom: 8px #fcc100 solid;
+}
+#name-tag__upper-bar:before {
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  background: #FFFFFF;
+  transform: skew(-25deg);
+  transform-origin:top;
+  border-bottom: 8px #fcc100 solid;
+}
+#name-tag__upper-bar:after {
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -45px;
+  width: 60px;
+  background: #FFFFFF;
+  transform: skew(-25deg);
+  transform-origin:top;
+  border-bottom: 8px #fcc100 solid;
+}
+
+#name-tag__upper-bar__title h1,
+#name-tag__upper-bar__title h2 {
+  text-align: center;
+  margin: 0;
+  background: -webkit-linear-gradient(#3175A0, #405989);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+#name-tag__upper-bar__title h2 {
+  font-size: 16px;
+}
